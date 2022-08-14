@@ -1,16 +1,13 @@
 import './App.css';
 import Todo from './components/Todo/Todo';
-import Footer from './footer/Footer';
-import Header from './header/Header';
+import React from 'react'
 
 function App() {
   return (
     <div className="App">
-      <div className="AppChild"> 
-          <Header />
-          <Todo />
-          <Footer />
-      </div>
+        <div className="AppChild"> 
+            <Todo />
+        </div>
     </div>
   );
 }
