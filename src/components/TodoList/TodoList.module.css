@@ -1,0 +1,37 @@
+.hideCompletedwrapper {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.hideCompleted {
+    margin-right: 35px;
+    width: 18px;
+    height: 17.86px;
+    background: #008594;
+}
+
+.listwrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.elementtodo {
+    display: flex;
+    height: 72px;
+
+    align-items: center;
+    justify-content: start;
+    margin: 20px 25px;
+    border-bottom: 1px solid #E5E5E5;
+} 
+
+.completed {
+    margin-right: 35px;
+}
+
+.openModalBtn {
+    margin-left: auto;
+    cursor: pointer;
+}

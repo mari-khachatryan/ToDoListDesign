@@ -1,0 +1,56 @@
+.todo {
+    height: 100%;
+    width: 100%;
+    padding: 229px 0 0 80px;
+}
+
+.addbutton {
+    padding: 12px 31.5px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: #008594;
+    border: 0;
+    font-size: 18px;
+    line-height: 28px;
+    margin-left: 24px;
+}
+
+.addwrapper {
+    display: flex;
+}
+
+.inputwrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.taskinput {
+    width: 954px;
+    height: 52px;
+    border-radius: 4px;
+    border-color: #FFCD04;
+    border: 1px solid #FFCD04;
+    box-sizing: border-box;
+}
+
+.textwrpapper {
+    margin-top: 140px;
+    text-align: center;
+}
+
+.firsttaxt {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.2px;
+  color: #acacac;
+}
+
+.secondtext {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 54px;
+    letter-spacing: 0.002em;;
+    color: #666666;
+}

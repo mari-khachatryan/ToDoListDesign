@@ -1,8 +1,11 @@
 import { useState } from "react"
 import {useTodoContext} from "../../contexts/TodoProvider"
 import React from 'react'
-import CloseIcon from "@material-ui/core/Icon";
+// import CloseIcon from "@material-ui/core/Icon";
 import Modal from "../Modal/Modal";
+import { mergeClasses } from "@material-ui/styles";
+import classes from './TodoList.module.css'
+import closeicon from '../../assets/Vector.svg'
 
 
 const TodoList = () => {
@@ -48,32 +51,34 @@ const TodoList = () => {
     
     return (
       <div>
-         <label>
-            <input type="checkbox" checked={hideCompleted} onChange={handleChange}/>
-             Hide completed
-         </label>
+         <div className={classes.hideCompletedwrapper}>
+            <input className={classes.hideCompleted} type="checkbox" checked={hideCompleted} onChange={handleChange}/>
+            <span>Hide completed</span>
+         </div>
+        <div className={classes.listwrapper}>
         {
             todoList.map(todo => {
                 return (
-                    <div key={todo.id} style={{display: hideCompleted && todo.completed ? "none" : ""}}>
-                            <input type="checkbox" checked={todo.completed} onChange={() => handleChangeitem(todo)}/>
-                            <p>{todo.title}</p>
-                            <button 
-                                className="openModalBtn"
-                                onClick={() => {
-                                    setCheckedItem(todo, setOpenModal(true))
-                                }} >
-                            
-                            {/* {
-                                <CloseIcon color="action"/>
-                            } */}
-                            X
-                            </button>
+                    <div key={todo.id} className={classes.elementtodo} style={{display: hideCompleted && todo.completed ? "none" : ""}}>
+                        <input type="checkbox" className={classes.completed} checked={todo.completed} onChange={() => handleChangeitem(todo)}/>
+                        <span>{todo.title}</span>
+                        <closeicon 
+                            className={classes.openModalBtn}
+                            onClick={() => {
+                                setCheckedItem(todo, setOpenModal(true))
+                            }} >
+                        
+                        {/* {
+                            <CloseIcon color="action"/>
+                        } */}
+                        X
+                        </closeicon>
                     </div>
                 )
             })
         }
-        {openModal && <Modal handleClose={setOpenModal} handleYes={onDeleteItem} />}
+        </div>
+        {openModal && <Modal handleClose={setOpenModal} handleYes={onDeleteItem} isOpen={openModal} />}
       </div>
     )
   }
