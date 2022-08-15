@@ -32,15 +32,6 @@ const TodoList = () => {
 
     const handleChange = () => {
         setHideCompleted(!hideCompleted)
-        // setTodoList((prev) => {
-        //     return prev.filter((item) => {
-        //         if ( !item.completed ) {
-        //             return ({
-        //                 ...item
-        //             })
-        //         } 
-        //     })
-        // })
     }
 
     const onDeleteItem = () => {
@@ -67,10 +58,6 @@ const TodoList = () => {
                             onClick={() => {
                                 setCheckedItem(todo, setOpenModal(true))
                             }} >
-                        
-                        {/* {
-                            <CloseIcon color="action"/>
-                        } */}
                         X
                         </closeicon>
                     </div>
